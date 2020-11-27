@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/grioos/clean-architecture-typescript/issues"
   },
-  "homepage": "https://github.com/grioos/clean-architecture-typescript#readme"
+  "homepage": "https://github.com/grioos/clean-architecture-typescript#readme",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
 }
