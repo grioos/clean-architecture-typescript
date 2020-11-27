@@ -1,10 +1,11 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
+  coverageDirectory: 'coverage',
   testEnvironment: 'node',
+  roots: ['<rootDir>/src'],
   transform: {
-    '.+\\.ts$': 'ts-test'
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1'
   }
-}
+};
