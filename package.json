@@ -1,5 +1,5 @@
 {
-  "name": "clean-architecture-typescript",
+  "name": "clean-ts-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grioos/clean-architecture-typescript.git"
+    "url": "git+https://github.com/grioos/clean-ts-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/grioos/clean-architecture-typescript/issues"
+    "url": "https://github.com/grioos/clean-ts-api/issues"
   },
-  "homepage": "https://github.com/grioos/clean-architecture-typescript#readme",
+  "homepage": "https://github.com/grioos/clean-ts-api#readme",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
