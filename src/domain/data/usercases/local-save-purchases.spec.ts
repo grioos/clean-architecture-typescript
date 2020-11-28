@@ -1,5 +1,21 @@
+class LocalSavePurchases {
+  constructor(private readonly cacheStore: CacheStore) { }
+}
+
+interface CacheStore {
+
+}
+
+class CacheStoreSpy implements CacheStore {
+  deleteCallsCount = 0
+}
+
 describe('LocalSavePurchases', () => {
-  test('', () => {
-    expect(1).toBe(1)
+  test('Should not delete cache on suit.init', () => {
+    const cacheStore = new CacheStoreSpy()
+
+    new LocalSavePurchases(cacheStore)
+
+    expect(cacheStore.deleteCallsCount).toBe(0)
   })
 })
