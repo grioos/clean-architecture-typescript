@@ -1,10 +1,10 @@
 module.exports = {
   coverageDirectory: 'coverage',
-  coverageProvider: 'babel',
+  coverageProvider: 'v8',
   testEnvironment: 'node',
   roots: ['<rootDir>/src'],
   transform: {
-    "^.+\\.[t|j]sx?$": "babel-jest"
+    '.+\\.ts$': 'ts-jest'
   },
   transformIgnorePatterns: [`/node_modules/(?!(@opt-ui|@equinor))`],
   moduleNameMapper: {
