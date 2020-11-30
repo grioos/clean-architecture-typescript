@@ -1,4 +1,4 @@
-import { PurchaseModel } from "@/domain/models";
+import { PurchaseModel } from '@/domain/models'
 
 export interface SavePurchases {
   save: (purchases: Array<SavePurchases.Params>) => Promise<void>
