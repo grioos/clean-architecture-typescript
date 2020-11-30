@@ -29,8 +29,7 @@ describe('LocalLoadPurchases', () => {
     cacheStore.simulateFecthError()
     const purchases = await sut.loadAll()
 
-    expect(cacheStore.actions).toEqual([CacheStoreSpy.Action.fetch, CacheStoreSpy.Action.delete])
-    expect(cacheStore.deleteKey).toBe('purchases')
+    expect(cacheStore.actions).toEqual([CacheStoreSpy.Action.fetch])
     expect(purchases).toEqual([])
   })
 
