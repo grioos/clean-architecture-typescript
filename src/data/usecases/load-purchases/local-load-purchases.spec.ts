@@ -1,6 +1,5 @@
 import { LocalLoadPurchases } from '@/data/usecases'
 import { CacheStoreSpy, mockPurchases } from '@/data/tests'
-import { time } from 'console'
 
 type SutTypes = {
   sut: LocalLoadPurchases
