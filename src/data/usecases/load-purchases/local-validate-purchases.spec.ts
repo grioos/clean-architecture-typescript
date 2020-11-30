@@ -1,5 +1,5 @@
 import { LocalLoadPurchases } from '@/data/usecases'
-import { CacheStoreSpy } from '@/data/tests'
+import { CacheStoreSpy, getCacheExpirationDate } from '@/data/tests'
 
 type SutTypes = {
   sut: LocalLoadPurchases
@@ -31,5 +31,23 @@ describe('LocalLoadPurchases', () => {
 
     expect(cacheStore.actions).toEqual([CacheStoreSpy.Action.fetch, CacheStoreSpy.Action.delete])
     expect(cacheStore.deleteKey).toBe('purchases')
+  })
+
+  test('Should return a list of purchases if cache is valid', async () => {
+    const currentDate = new Date()
+    const timestamp = getCacheExpirationDate(currentDate)
+
+    timestamp.setSeconds(timestamp.getSeconds() + 1)
+
+    const { cacheStore, sut } = makeSut(timestamp)
+
+    cacheStore.fetchResults = {
+      timestamp
+    }
+
+    sut.validate()
+
+    expect(cacheStore.actions).toEqual([CacheStoreSpy.Action.fetch])
+    expect(cacheStore.fetchKey).toBe('purchases')
   })
 })
