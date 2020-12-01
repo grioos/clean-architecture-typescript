@@ -1,5 +1,5 @@
 {
-  "name": "clean-ts-api",
+  "name": "clean-cache-control",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grioos/clean-ts-api.git"
+    "url": "git+https://github.com/grioos/clean-cache-control.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/grioos/clean-ts-api/issues"
+    "url": "https://github.com/grioos/clean-cache-control/issues"
   },
-  "homepage": "https://github.com/grioos/clean-ts-api#readme",
+  "homepage": "https://github.com/grioos/clean-cache-control#readme",
   "devDependencies": {
     "@types/faker": "^5.1.4",
     "@types/jest": "^26.0.15",
